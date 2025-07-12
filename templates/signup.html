@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Create an Account</h2>
+    <form method="POST" class="mx-auto" style="max-width: 400px;">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control", placeholder="Your full name") }}
+            {% if form.username.errors %}
+                <div class="text-danger">{{ form.username.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control", placeholder="you@example.com") }}
+            {% if form.email.errors %}
+                <div class="text-danger">{{ form.email.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Create a password") }}
+            {% if form.password.errors %}
+                <div class="text-danger">{{ form.password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+
+
+        <div class="mb-3">
+            {{ form.confirm_password.label(class="form-label") }}
+            {{ form.confirm_password(class="form-control", placeholder=form.confirm_password.label.text) }}
+            {% if form.confirm_password.errors %}
+                <div class="text-danger">{{ form.confirm_password.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.birthday.label(class="form-label") }}
+            {{ form.birthday(class="form-control") }}
+            {% if form.birthday.errors %}
+                <div class="text-danger">{{ form.birthday.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label d-block">{{ form.gender.label.text }}</label>
+            {% for subfield in form.gender %}
+                <div class="form-check form-check-inline">
+                    {{ subfield(class="form-check-input") }}
+                    <label class="form-check-label" for="{{ subfield.id }}">{{ subfield.label.text }}</label>
+                </div>
+            {% endfor %}
+            {% if form.gender.errors %}
+                <div class="text-danger">{{ form.gender.errors[0] }}</div>
+            {% endif %}
+        </div>
+
+        {{ form.submit(class="btn btn-primary w-100") }}
+
+        <p class="text-center mt-3">
+            Already have an account? <a href="/login">Log in here</a>
+        </p>
+    </form>
+</div>
+{% endblock %}

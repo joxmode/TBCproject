@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}Third Page{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+
+    <div class="main">
+        <h1>Welcome page dedicated to Tanks!!!</h1>
+        <p><strong>Here you will read interesting info about <span class="tanks-highlight">tanks</span></strong></p>
+        <br />
+    </div>
+
+    <div class="table">
+        <p><strong>I like tanks. The table shows characteristics of my favourite TANKS!!!</strong></p>
+        <br /><br /><br />
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Tank</th>
+                        <th>Top Speed (km/h)</th>
+                        <th>Barrel mm</th>
+                        <th>Armor thickness (mm)</th>
+                        <th>Weight</th>
+                        <th>Engine power</th>
+                        <th>Manufacture year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T-90</td>
+                        <td>60</td>
+                        <td>125</td>
+                        <td>700</td>
+                        <td>46 tons</td>
+                        <td>1000 hp</td>
+                        <td>1992</td>
+                    </tr>
+                    <tr>
+                        <td>M1 Abrams</td>
+                        <td>67.6</td>
+                        <td>120</td>
+                        <td>700</td>
+                        <td>63 tons</td>
+                        <td>1500 hp</td>
+                        <td>1980</td>
+                    </tr>
+                    <tr>
+                        <td>Leopard 2A7</td>
+                        <td>72</td>
+                        <td>120</td>
+                        <td>800</td>
+                        <td>62 tons</td>
+                        <td>1500 hp</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <td>Challenger 2</td>
+                        <td>59.5</td>
+                        <td>120</td>
+                        <td>700</td>
+                        <td>62 tons</td>
+                        <td>1500 hp</td>
+                        <td>1998</td>
+                    </tr>
+                    <tr>
+                        <td>T-14 Armata</td>
+                        <td>90</td>
+                        <td>125</td>
+                        <td>900</td>
+                        <td>48 tons</td>
+                        <td>1500 hp</td>
+                        <td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>Merkava Mk.4</td>
+                        <td>64</td>
+                        <td>120</td>
+                        <td>800</td>
+                        <td>65 tons</td>
+                        <td>1500 hp</td>
+                        <td>2004</td>
+                    </tr>
+                    <tr>
+                        <td>Type 99</td>
+                        <td>80</td>
+                        <td>125</td>
+                        <td>700</td>
+                        <td>58 tons</td>
+                        <td>1500 hp</td>
+                        <td>2001</td>
+                    </tr>
+                    <tr>
+                        <td>Leclerc</td>
+                        <td>72</td>
+                        <td>120</td>
+                        <td>700</td>
+                        <td>56 tons</td>
+                        <td>1500 hp</td>
+                        <td>1992</td>
+                    </tr>
+                    <tr>
+                        <td>T-72-TURMS-T</td>
+                        <td>60</td>
+                        <td>125</td>
+                        <td>700</td>
+                        <td>45 tons</td>
+                        <td>1000 hp</td>
+                        <td>1978</td>
+                    </tr>
+                    <tr>
+                        <td>T-72-SIM-1 (Georgian modification)</td>
+                        <td>60</td>
+                        <td>125</td>
+                        <td>700</td>
+                        <td>45 tons</td>
+                        <td>1000 hp</td>
+                        <td>2000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="rounds mt-5">
+        <p><strong>Here are some of my main <span class="color-red">tank rounds</span> and their
+                penetration:</strong></p>
+        <ul class="list-unstyled">
+            <li>APFSDS: 500–700 mm</li>
+            <li>HEAT/HEAT-FS: 400–600 mm</li>
+            <li>HE: 200–300 mm</li>
+            <li>HESH: 300–400 mm</li>
+            <li>APDS: 400–600 mm</li>
+            <li>ATGM: 400–1200 mm</li>
+        </ul>
+
+        <p class="mt-4"><strong>Here are some <span class="color-red">older tank rounds</span> and how they
+                work:</strong></p>
+        <ul class="list-unstyled">
+            <li>AP: 200–300 mm (Kinetic energy)</li>
+            <li>APCBC: 250–350 mm (Improved aerodynamics)</li>
+            <li>APCR: 300–400 mm (Dense core)</li>
+            <li>Shaped Charge: 300–500 mm (Explosive jet)</li>
+            <li>APHE: 100–250 mm (Explodes inside armor)</li>
+            <li>Shrapnel: 100–180 mm (Metal pellets inside tank)</li>
+        </ul>
+    </div>
+
+    <div class="gifs mt-5">
+        <p><strong>Here are some pics of <span class="color-green">tanks</span></strong></p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <img src="https://www.difesaonline.it/sites/default/files/styles/large/public/article/101215%20t90%20%283%29.jpg?itok=cO8Na4Qc"
+                alt="T-90" width="400" />
+            <img src="https://images03.military.com/sites/default/files/media/equipment/military-vehicles/m1a2-abrams-main-battle-tank/2014/02/m1a2-abrams-battle-tank-06.jpg"
+                alt="M1 Abrams" width="400" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Leopard_2_A5_der_Bundeswehr.jpg/1200px-Leopard_2_A5_der_Bundeswehr.jpg"
+                alt="Leopard 2A7" width="400" />
+            <img src="https://armyrecognition.com/images/stories/europe/united_kingdom/main_battle_tank/challenger2/Challenger_2_FV4034_MBT_Main_Battle_Tank_United_Kingdom_925_001.jpg"
+                alt="Challenger 2" width="400" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/VDayRehearsal05052016-28.jpg/500px-VDayRehearsal05052016-28.jpg"
+                alt="T-14 Armata" width="400" />
+        </div>
+    </div>
+</div>
+{% endblock %}

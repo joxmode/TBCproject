@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Second Page{% endblock %}
+
+{% block content %}
+
+
+<div class="main text-center">
+    <h1>Welcome to page about Military Jets!!!</h1>
+    <p><strong>Here you will read about cool Jets</strong></p>
+    <br/>
+</div>
+
+<div class="table text-center">
+    <p><strong>I like fighter jets and tanks. The table shows top speed of my favourite JETS!!!</strong></p>
+    <br/><br/><br/>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+            <tr>
+                <th>Jet</th>
+                <th>Top Speed (km/h)</th>
+                <th>Top Speed (Mach)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>F-22 Raptor</td>
+                <td>2410</td>
+                <td>Mach 2.25</td>
+            </tr>
+            <tr>
+                <td>Su-57</td>
+                <td>2600</td>
+                <td>Mach 2.25</td>
+            </tr>
+            <tr>
+                <td>MiG-31</td>
+                <td>3000</td>
+                <td>Mach 2.83</td>
+            </tr>
+            <tr>
+                <td>F-15 Eagle</td>
+                <td>2650</td>
+                <td>Mach 2.5</td>
+            </tr>
+            <tr>
+                <td>Eurofighter Typhoon</td>
+                <td>2495</td>
+                <td>Mach 2.0</td>
+            </tr>
+            <tr>
+                <td>F-16 Fighting Falcon</td>
+                <td>2120</td>
+                <td>Mach 2.0</td>
+            </tr>
+            <tr>
+                <td>Dassault Rafale</td>
+                <td>2220</td>
+                <td>Mach 1.8</td>
+            </tr>
+            <tr>
+                <td>JAS 39 Gripen</td>
+                <td>2120</td>
+                <td>Mach 2.0</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="jet-pics text-center">
+    <h2>Check out these awesome <span class="color-green">Jets!</span></h2>
+
+    <div class="jet">
+        <h3>F-22 Raptor</h3>
+        <img src="{{ url_for('static', filename='images/f-22.jpg') }}" alt="F-22 Raptor" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>F-15 Eagle</h3>
+        <img src="{{ url_for('static', filename='images/f-15.jpg') }}" alt="F-15 Eagle" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>Su-57</h3>
+        <img src="{{ url_for('static', filename='images/su-57.jpg') }}" alt="Su-57" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>MiG-31</h3>
+        <img src="{{ url_for('static', filename='images/mig-31.jpg') }}" alt="MiG-31" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>Eurofighter Typhoon</h3>
+        <img src="{{ url_for('static', filename='images/euro.jpg') }}" alt="Eurofighter Typhoon" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>F-16 Fighting Falcon</h3>
+        <img src="{{ url_for('static', filename='images/f-16.jpeg') }}" alt="F-16 Fighting Falcon" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>Dassault Rafale</h3>
+        <img src="{{ url_for('static', filename='images/dassault.jpg') }}" alt="Dassault Rafale" width="400"
+             class="d-block mx-auto"/>
+    </div>
+
+    <div class="jet">
+        <h3>JAS 39 Gripen</h3>
+        <img src="{{ url_for('static', filename='images/JAS-39-Gripen.jpeg') }}" alt="JAS 39 Gripen" width="400"
+             class="d-block mx-auto"/>
+    </div>
+</div>
+{% endblock %}

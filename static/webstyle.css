@@ -1,0 +1,152 @@
+/* ========== MTAVARI ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #003366;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+footer p {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+}
+/* ========== LINKEBI ========== */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* ========== NAVBARI ========== */
+.navbar {
+    padding: 1rem;
+    font-size: 17px;
+    background-color: #343a40;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== HEAD ========== */
+.news-header {
+    background: linear-gradient(90deg, #343a40 0%, #495057 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ========== CARDS ========== */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-title {
+    color: #212529;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ========== TABLES ========== */
+.table {
+    margin-top: 20px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    font-size: 16px;
+}
+
+th {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* ========== UTILITIES ========== */
+.color-blue { color: blue; }
+.color-red { color: red; }
+.color-green { color: green; }
+.color-pink { color: deeppink; }
+
+.rounds ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* ========== SURATEBI ========== */
+.gifs {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gifs img {
+    width: 30%;
+    max-width: 400px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    vertical-align: top;
+    transition: transform 0.3s;
+}
+
+.gifs img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .gifs img {
+        width: 90%;
+    }
+}

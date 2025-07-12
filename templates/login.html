@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Login</h2>
+    <form method="POST" action="" class="mx-auto" style="max-width: 400px;">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control", placeholder="Enter your email") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Enter your password") }}
+        </div>
+
+        {{ form.submit(class="btn btn-primary w-100") }}
+
+        <p class="text-center mt-3">
+            Don't have an account? <a href="{{ url_for('main.signup') }}">Sign up</a>
+        </p>
+    </form>
+</div>
+{% endblock %}

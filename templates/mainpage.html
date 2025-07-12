@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home | MyNewsSite{% endblock %}
+
+{% block headline %}Welcome to MyNewsSite{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron p-5 mb-5 bg-white rounded-3 shadow-sm border">
+    <div class="container py-5">
+        <h1 class="display-5 fw-bold">Stay Informed, Stay Ahead</h1>
+        <p class="lead mb-4">Bringing you the latest headlines, exclusive stories, and global insights every day.</p>
+        <a class="btn btn-primary btn-lg" href="/news" role="button">Read Latest News</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 mb-4">
+        <h2 class="mb-3">📰 Featured News</h2>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🌍 Global Tensions Rise</h5>
+                <p class="card-text">Diplomatic talks continue as world leaders respond to the recent developments. <a href="/news">Read more...</a></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📉 Market Shake-Up</h5>
+                <p class="card-text">Stocks dropped sharply today amid economic uncertainty. <a href="/news">Read more...</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

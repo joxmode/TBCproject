@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Interesting Info{% endblock %}
+{% block headline %}Explore Interesting Articles    {% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    <p class="lead">Here's a collection of detailed info pages about military tech, vehicles, and more. Click to explore:</p>
+</div>
+
+<ul class="list-group mb-4">
+    {% for page in pages %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span><strong>{{ page.emoji }} {{ page.name }}</strong> – {{ page.desc }}</span>
+        <a href="{{ page.url }}" class="btn btn-sm btn-outline-primary">View</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3 class="mb-3">Submitted Articles</h3>
+{% if infos %}
+    {% for info in infos %}
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">{{ info.title }}</h5>
+            <p class="card-text">{{ info.content }}</p>
+            <small class="text-muted">Posted on {{ info.created_at.strftime('%Y-%m-%d') }}</small>
+
+            {% if current_user.is_authenticated and current_user.role == 'Admin' %}
+            <div class="mt-2">
+                <a href="{{ url_for('main.edit_info', info_id=info.id) }}" class="btn btn-sm btn-warning me-2">Edit</a>
+                <form action="{{ url_for('main.delete_info', info_id=info.id) }}" method="POST" style="display:inline;">
+                    {{ delete_form.hidden_tag() }}
+                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>No info submitted yet. Be the first to add some!</p>
+{% endif %}
+
+<div class="text-end mt-4">
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('main.add_info') }}" class="btn btn-success">➕ Add Your Own Info</a>
+    {% else %}
+        <a href="{{ url_for('main.login') }}" class="btn btn-outline-primary">Log in to Add Info</a>
+    {% endif %}
+</div>
+{% endblock %}
