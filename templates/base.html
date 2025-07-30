@@ -21,7 +21,6 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
             <ul class="navbar-nav">
-                {# Safer check for active link #}
                 <li class="nav-item">
                     <a class="nav-link {% if request.endpoint == 'main.news' %}active{% endif %}"
                        aria-current="{% if request.endpoint == 'main.news' %}page{% endif %}"
